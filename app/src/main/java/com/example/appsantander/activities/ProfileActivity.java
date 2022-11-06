@@ -1,4 +1,4 @@
-package com.example.appsantander;
+package com.example.appsantander.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.appsantander.R;
 import com.example.appsantander.adapters.CardItemAdapter;
 import com.example.appsantander.ui.CardButton;
 
@@ -35,7 +36,7 @@ public class ProfileActivity extends AppCompatActivity {
         buttons.add(new CardButton("Pix", null, view -> {}));
         buttons.add(new CardButton("Pagar", null, view -> {}));
         buttons.add(new CardButton("Transferir", null, view -> {}));
-        cardButtonRecyclerView.setAdapter(new CardItemAdapter(buttons, R.layout.card_item_white));
+        cardButtonRecyclerView.setAdapter(new CardItemAdapter(buttons));
     }
 
     @Override

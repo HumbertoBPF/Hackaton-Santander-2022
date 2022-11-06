@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray"
-    tools:context=".ProfileActivity">
+    android:background="@color/gray_1"
+    tools:context=".activities.ProfileActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -71,24 +71,10 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/app_name"
-                    android:layout_marginVertical="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/logo"/>
-
-                <TextView
-                    android:id="@+id/app_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/app_logo"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:text="@string/logo_text"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:layout_marginVertical="16dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/logo_with_name"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -117,7 +103,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:paddingHorizontal="16dp"
-                android:background="@color/red">
+                android:background="@color/red_2">
 
                 <TextView
                     android:id="@+id/greeting_text_view"
@@ -295,13 +281,62 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pagination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/unify_accounts_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/page_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/circle_shape"/>
+
+                <ImageView
+                    android:id="@+id/page_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/page_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/circle_shape"
+                    android:layout_marginStart="8dp"
+                    app:tint="@color/gray_3"/>
+
+                <ImageView
+                    android:id="@+id/page_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/page_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/circle_shape"
+                    android:layout_marginStart="8dp"
+                    app:tint="@color/gray_3"/>
+
+                <ImageView
+                    android:id="@+id/page_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/page_3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/circle_shape"
+                    android:layout_marginStart="8dp"
+                    app:tint="@color/gray_3"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
                 android:id="@+id/loans_section_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/unify_accounts_card"
+                app:layout_constraintTop_toBottomOf="@id/pagination"
                 android:layout_marginTop="48dp"
                 android:layout_marginHorizontal="16dp"
                 android:textSize="18sp"
@@ -365,6 +400,207 @@
                         android:text="Simule agora"
                         android:textStyle="bold"
                         android:textSize="14sp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cards_section_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loans_card"
+                android:layout_marginTop="32dp"
+                android:layout_marginHorizontal="16dp"
+                android:text="Cartões"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_visa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cards_section_text_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:backgroundTint="@color/red_3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:id="@+id/card_visa_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_coin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:tint="@color/white"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/card_visa_icon"
+                        app:layout_constraintEnd_toStartOf="@id/card_visa_icon_dropdown"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="Cartão final 0000"
+                        android:layout_marginHorizontal="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:id="@+id/card_visa_icon_dropdown"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_down"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:tint="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_master"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/card_visa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="16dp"
+                android:backgroundTint="@color/red_3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:id="@+id/card_master_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_coin"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:tint="@color/white"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/card_master_icon"
+                        app:layout_constraintEnd_toStartOf="@id/card_master_icon_dropdown"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="Cartão final 0000"
+                        android:layout_marginHorizontal="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <ImageView
+                        android:id="@+id/card_master_icon_dropdown"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_down"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:tint="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/online_card_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/card_master"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                app:strokeColor="@color/red_2"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingVertical="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="Cartão online"
+                        android:textSize="14sp"
+                        android:textColor="@color/red_2"
+                        android:gravity="center"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/parcel_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/online_card_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="RtlSymmetry">
+
+                    <ImageView
+                        android:id="@+id/parcel_card_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="92dp"
+                        android:src="@drawable/pictures"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/parcel_card_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginHorizontal="16dp"
+                        android:text="Fatura apertou? Aproveite para parcelar com entrada de R$ 10."
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

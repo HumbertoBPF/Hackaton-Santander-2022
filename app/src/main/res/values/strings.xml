@@ -9,7 +9,7 @@
     <string name="cpf_edit_text_placeholder">CPF</string>
     <string name="access_account_label">Acessar sua conta:</string>
     <string name="save_cpf_label">Lembrar meu CPF</string>
-    <string name="enable_face_id_access_label">Habilitar acesso com Face ID</string>
+    <string name="save_password_label">Esqueci minha senha</string>
     <string name="help_button_text">Ajuda</string>
     <string name="santander_id_button_text">ID Santander</string>
     <string name="access_account_button_text">Acessar sua\nconta</string>

@@ -16,17 +16,15 @@ import java.util.List;
 
 public class CardItemAdapter extends RecyclerView.Adapter<CardItemAdapter.CardButtonViewHolder> {
     private final List<CardButton> buttons;
-    private final Integer layoutResource;
 
-    public CardItemAdapter(List<CardButton> buttons, Integer layoutResource) {
+    public CardItemAdapter(List<CardButton> buttons) {
         this.buttons = buttons;
-        this.layoutResource = layoutResource;
     }
 
     @NonNull
     @Override
     public CardItemAdapter.CardButtonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(layoutResource, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, parent, false);
         return new CardButtonViewHolder(view);
     }
 

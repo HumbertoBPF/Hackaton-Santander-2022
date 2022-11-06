@@ -1,4 +1,4 @@
-package com.example.appsantander;
+package com.example.appsantander.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.appsantander.R;
 import com.example.appsantander.adapters.CardItemAdapter;
 import com.example.appsantander.ui.CardButton;
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }));
-        cardButtonRecyclerView.setAdapter(new CardItemAdapter(buttons, R.layout.card_item_gray));
+        cardButtonRecyclerView.setAdapter(new CardItemAdapter(buttons));
     }
 
     @Override

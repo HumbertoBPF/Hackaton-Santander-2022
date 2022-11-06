@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
@@ -46,24 +46,10 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/app_name"
-                    android:layout_marginVertical="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/logo"/>
-
-                <TextView
-                    android:id="@+id/app_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/app_logo"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:text="@string/logo_text"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:layout_marginVertical="16dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/logo_with_name"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -113,7 +99,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/remember_cpf_switch"
             android:text="@string/save_cpf_label"
-            android:textColor="@color/placeholder_gray"
+            android:textColor="@color/gray_3"
             android:textStyle="bold"
             android:textSize="16sp"/>
 
@@ -142,8 +128,8 @@
             app:layout_constraintBottom_toBottomOf="@id/remember_password_switch"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/remember_password_switch"
-            android:text="@string/enable_face_id_access_label"
-            android:textColor="@color/placeholder_gray"
+            android:text="@string/save_password_label"
+            android:textColor="@color/gray_3"
             android:textStyle="bold"
             android:textSize="16sp"/>
 
@@ -158,26 +144,30 @@
             android:id="@+id/password_forgotten_link"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/remember_password_switch"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
             android:text="@string/forgotten_password_text"
+            android:textColor="@color/red_2"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textSize="16sp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/remember_password_switch" />
 
         <Button
             android:id="@+id/login_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:paddingVertical="8dp"
             android:text="@string/login_button_text"
-            android:textSize="16sp"
             android:textAllCaps="false"
-            android:paddingVertical="8dp"/>
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

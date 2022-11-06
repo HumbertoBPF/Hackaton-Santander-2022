@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginHorizontal="8dp"
-        app:cardBackgroundColor="@color/selector_for_gray_card_button"
+        app:cardBackgroundColor="@color/selector_for_card_button"
         app:cardCornerRadius="4dp">
         
         <androidx.constraintlayout.widget.ConstraintLayout
