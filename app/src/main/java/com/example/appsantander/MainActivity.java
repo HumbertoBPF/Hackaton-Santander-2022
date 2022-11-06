@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,6 +12,8 @@ import androidx.cardview.widget.CardView;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+    private CardView helpCard;
+    private CardView idSantanderCard;
     private CardView loginCard;
 
     @Override
@@ -30,14 +29,17 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);// set drawable icon
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        helpCard = findViewById(R.id.help_card);
+        idSantanderCard = findViewById(R.id.id_santander_card);
         loginCard = findViewById(R.id.login_card);
 
-        loginCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
+        helpCard.setOnClickListener(view -> {});
+
+        idSantanderCard.setOnClickListener(view -> {});
+
+        loginCard.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
         });
     }
 
