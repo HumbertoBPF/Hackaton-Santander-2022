@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
 
     private Boolean rememberCpf = false;
+    private Boolean rememberPassword = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +80,10 @@ public class LoginActivity extends AppCompatActivity {
                     saveStringOnSharedPref("userCpf", cpfInput);
                 }
 
+                if (rememberPassword){
+                    saveStringOnSharedPref("userPassword", passwordInput);
+                }
+
                 Intent intent = new Intent(LoginActivity.this, LoadingActivity.class);
                 startActivity(intent);
             }
@@ -88,6 +93,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 rememberCpf = b;
+            }
+        });
+
+        rememberPasswordSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                rememberPassword = b;
             }
         });
     }
