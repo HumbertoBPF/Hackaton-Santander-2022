@@ -7,14 +7,17 @@ import android.view.MenuInflater;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.appsantander.adapters.CardItemAdapter;
+import com.example.appsantander.ui.CardButton;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
-    private CardView helpCard;
-    private CardView idSantanderCard;
-    private CardView loginCard;
+    private RecyclerView cardButtonRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +32,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);// set drawable icon
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        helpCard = findViewById(R.id.help_card);
-        idSantanderCard = findViewById(R.id.id_santander_card);
-        loginCard = findViewById(R.id.login_card);
+        cardButtonRecyclerView = findViewById(R.id.card_button_recycler_view);
 
-        helpCard.setOnClickListener(view -> {});
-
-        idSantanderCard.setOnClickListener(view -> {});
-
-        loginCard.setOnClickListener(view -> {
+        List<CardButton> buttons = new ArrayList<>();
+        buttons.add(new CardButton("Ajuda", null, view -> {}));
+        buttons.add(new CardButton("ID Santander", null, view -> {}));
+        buttons.add(new CardButton("Acessar sua\nconta", null, view -> {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
-        });
+        }));
+        cardButtonRecyclerView.setAdapter(new CardItemAdapter(buttons, R.layout.card_item_gray));
     }
 
     @Override

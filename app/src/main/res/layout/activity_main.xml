@@ -116,74 +116,16 @@
             android:layout_marginHorizontal="8dp"
             android:paddingVertical="32dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/help_card"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/card_button_recycler_view"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="1"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/id_santander_card"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginHorizontal="8dp"
-                app:cardBackgroundColor="@color/selector_for_card_button"
-                app:cardCornerRadius="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/help_button_text"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="@color/selector_for_text"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/id_santander_card"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="1"
-                app:layout_constraintStart_toEndOf="@id/help_card"
-                app:layout_constraintEnd_toStartOf="@id/login_card"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginHorizontal="8dp"
-                app:cardBackgroundColor="@color/selector_for_card_button"
-                app:cardCornerRadius="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/santander_id_button_text"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/selector_for_text"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/login_card"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/id_santander_card"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginHorizontal="8dp"
-                app:cardBackgroundColor="@color/selector_for_card_button"
-                app:cardCornerRadius="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/access_account_button_text"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:textColor="@color/selector_for_text"/>
-
-            </androidx.cardview.widget.CardView>
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

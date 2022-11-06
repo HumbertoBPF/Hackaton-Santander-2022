@@ -14,4 +14,6 @@
     <string name="santander_id_button_text">ID Santander</string>
     <string name="access_account_button_text">Acessar sua\nconta</string>
     <string name="pay_swap_button_text">Pagar ou cobrar</string>
+    <string name="banking_credentials_text">Ag 1234, Cc 01234567-8</string>
+    <string name="greeting_text">Olá, Humberto</string>
 </resources>
