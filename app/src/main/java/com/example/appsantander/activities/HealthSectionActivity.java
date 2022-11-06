@@ -16,13 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class MenuActivity extends AppCompatActivity {
+public class HealthSectionActivity extends AppCompatActivity {
     private RecyclerView menuRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_health);
 
         menuRecyclerView = findViewById(R.id.menu_recycler_view);
 
@@ -35,12 +35,17 @@ public class MenuActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         List<MenuItemButton> buttons = new ArrayList<>();
-        buttons.add(new MenuItemButton("OpenFinance", null, null, "Mais autonomia e as melhores ofertas"));
-        buttons.add(new MenuItemButton("Pix", R.drawable.ic_pix, null, "Pague, transfira e receba"));
-        buttons.add(new MenuItemButton("Saúde", R.drawable.ic_hand_health, new View.OnClickListener() {
+        buttons.add(new MenuItemButton("Plano saúde", null, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, HealthSectionActivity.class);
+                Intent intent = new Intent(HealthSectionActivity.this, HealthAssuranceActivity.class);
+                startActivity(intent);
+            }
+        }, null));
+        buttons.add(new MenuItemButton("Seguro viagem", null, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HealthSectionActivity.this, TravelAssuranceActivity.class);
                 startActivity(intent);
             }
         }, null));

@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.appsantander.R;
 
-public class HealthPlanActivity extends AppCompatActivity {
+public class TravelAssuranceActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_plan);
+        setContentView(R.layout.activity_travel_assurance);
     }
 }
