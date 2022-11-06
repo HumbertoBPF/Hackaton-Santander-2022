@@ -55,9 +55,14 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String savedCpf = sp.getString("userCpf", null);
+        String savedPassword = sp.getString("userPassword", null);
 
         if (savedCpf != null){
             cpfEditText.setText(savedCpf);
+        }
+
+        if (savedPassword != null){
+            passwordEditText.setText(savedCpf);
         }
 
         loginButton.setOnClickListener(new View.OnClickListener() {

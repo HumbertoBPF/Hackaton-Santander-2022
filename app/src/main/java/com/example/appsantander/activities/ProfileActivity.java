@@ -33,9 +33,9 @@ public class ProfileActivity extends AppCompatActivity {
         cardButtonRecyclerView = findViewById(R.id.card_button_recycler_view);
 
         List<CardButton> buttons = new ArrayList<>();
-        buttons.add(new CardButton("Pix", null, view -> {}));
-        buttons.add(new CardButton("Pagar", null, view -> {}));
-        buttons.add(new CardButton("Transferir", null, view -> {}));
+        buttons.add(new CardButton("Pix", R.drawable.ic_pix, view -> {}));
+        buttons.add(new CardButton("Pagar", R.drawable.ic_barcode, view -> {}));
+        buttons.add(new CardButton("Transferir", R.drawable.ic_send_money, view -> {}));
         cardButtonRecyclerView.setAdapter(new CardItemAdapter(buttons));
     }
 

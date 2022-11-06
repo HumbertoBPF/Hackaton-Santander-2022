@@ -197,7 +197,7 @@
                         android:id="@+id/icon_coin"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_coin"
+                        android:src="@drawable/ic_money_loop"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -259,7 +259,7 @@
                         android:id="@+id/unify_accounts_card_icon"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_hand"
+                        android:src="@drawable/ic_papers"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -364,7 +364,7 @@
                         android:id="@+id/loans_card_icon"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_coin"
+                        android:src="@drawable/ic_money_hand"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -375,7 +375,7 @@
                         app:layout_constraintEnd_toStartOf="@id/loans_card_dropdown"
                         app:layout_constraintTop_toTopOf="@id/loans_card_icon"
                         app:layout_constraintBottom_toBottomOf="@id/loans_card_icon"
-                        android:text="Saldo disponível"
+                        android:text="Empréstimos"
                         android:layout_marginHorizontal="16dp"
                         android:textSize="14sp"
                         android:textStyle="bold"/>
@@ -438,9 +438,9 @@
 
                     <ImageView
                         android:id="@+id/card_visa_icon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_coin"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_visa_card"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -493,9 +493,9 @@
 
                     <ImageView
                         android:id="@+id/card_master_icon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/ic_coin"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_master_card"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -584,7 +584,7 @@
                         android:id="@+id/parcel_card_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="92dp"
-                        android:src="@drawable/pictures"
+                        android:src="@drawable/ic_images"
                         android:adjustViewBounds="true"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"

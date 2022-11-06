@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
         cardButtonRecyclerView = findViewById(R.id.card_button_recycler_view);
 
         List<CardButton> buttons = new ArrayList<>();
-        buttons.add(new CardButton("Ajuda", null, view -> {}));
-        buttons.add(new CardButton("ID Santander", null, view -> {}));
-        buttons.add(new CardButton("Acessar sua\nconta", null, view -> {
+        buttons.add(new CardButton("Ajuda", R.drawable.ic_help, view -> {}));
+        buttons.add(new CardButton("ID Santander", R.drawable.ic_lock, view -> {}));
+        buttons.add(new CardButton("Acessar sua\nconta", R.drawable.ic_login, view -> {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }));

@@ -49,7 +49,17 @@ public class CardItemAdapter extends RecyclerView.Adapter<CardItemAdapter.CardBu
         }
 
         public void bind(CardButton cardButton){
-            textView.setText(cardButton.getText());
+            String buttonText = cardButton.getText();
+            Integer buttonImageResource = cardButton.getIconResource();
+
+            if (cardButton.getText() != null){
+                textView.setText(buttonText);
+            }
+
+            if (cardButton.getIconResource() != null){
+                this.imageView.setImageResource(buttonImageResource);
+            }
+
             this.itemView.setOnClickListener(cardButton.getOnClickListener());
         }
     }
