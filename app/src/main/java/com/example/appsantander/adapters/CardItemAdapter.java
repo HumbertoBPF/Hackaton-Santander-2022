@@ -52,11 +52,11 @@ public class CardItemAdapter extends RecyclerView.Adapter<CardItemAdapter.CardBu
             String buttonText = cardButton.getText();
             Integer buttonImageResource = cardButton.getIconResource();
 
-            if (cardButton.getText() != null){
+            if (buttonText != null){
                 textView.setText(buttonText);
             }
 
-            if (cardButton.getIconResource() != null){
+            if (buttonImageResource != null){
                 this.imageView.setImageResource(buttonImageResource);
             }
 

@@ -3,9 +3,9 @@ package com.example.appsantander.ui;
 import android.view.View;
 
 public class CardButton {
-    private final String text;
-    private final Integer iconResource;
-    private final View.OnClickListener onClickListener;
+    protected final String text;
+    protected final Integer iconResource;
+    protected final View.OnClickListener onClickListener;
 
     public CardButton(String text, Integer iconResource, View.OnClickListener onClickListener) {
         this.text = text;
