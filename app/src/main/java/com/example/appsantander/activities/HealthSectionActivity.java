@@ -31,7 +31,7 @@ public class HealthSectionActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);// set drawable icon
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_dark);// set drawable icon
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         List<MenuItemButton> buttons = new ArrayList<>();
