@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Santander</string>
+    <string name="logo_text">Santander</string>
+    <string name="location">Location</string>
+    <string name="forgotten_password_text"><u>Esqueci minha senha</u></string>
+    <string name="password_edit_text_placeholder">Senha</string>
+    <string name="login_button_text">Entrar</string>
+    <string name="menu">Menu</string>
+</resources>
