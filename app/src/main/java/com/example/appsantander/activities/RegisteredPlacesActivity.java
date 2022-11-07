@@ -1,11 +1,12 @@
 package com.example.appsantander.activities;
 
-import android.content.Intent;
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 import com.example.appsantander.R;
 import com.example.appsantander.adapters.MenuItemAdapter;
@@ -15,16 +16,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class HealthAssuranceActivity extends AppCompatActivity {
-
-    private RecyclerView menuRecyclerView;
+public class RegisteredPlacesActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_assurance);
+        setContentView(R.layout.activity_registered_places);
 
-        menuRecyclerView = findViewById(R.id.menu_recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         // using toolbar as ActionBar
@@ -35,15 +35,9 @@ public class HealthAssuranceActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         List<MenuItemButton> buttons = new ArrayList<>();
-        buttons.add(new MenuItemButton("Conheça nossos planos", R.drawable.ic_check, view -> {
-            Intent intent = new Intent(HealthAssuranceActivity.this, HealthAssurancePlanActivity.class);
-            startActivity(intent);
-        }, null, R.drawable.ic_arrow_right));
-        buttons.add(new MenuItemButton("Redes credenciadas", R.drawable.ic_check, view -> {
-            Intent intent = new Intent(HealthAssuranceActivity.this, RegisteredPlacesActivity.class);
-            startActivity(intent);
-        }, null, R.drawable.ic_arrow_right));
+        buttons.add(new MenuItemButton("Consultas", null, null, null, R.drawable.ic_down));
+        buttons.add(new MenuItemButton("Emergências", null, null, null, R.drawable.ic_down));
 
-        menuRecyclerView.setAdapter(new MenuItemAdapter(buttons));
+        recyclerView.setAdapter(new MenuItemAdapter(buttons));
     }
 }

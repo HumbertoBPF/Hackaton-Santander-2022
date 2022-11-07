@@ -44,4 +44,6 @@
         <item>Telemedicina</item>
         <item>Descontos em farmácia</item>
     </string-array>
+    <string name="modify"><u>Alterar</u></string>
+    <string name="address_example">Av. Paulista, 1333 - Bela Vista, São Paulo - SP, 01311-000, Brasil</string>
 </resources>

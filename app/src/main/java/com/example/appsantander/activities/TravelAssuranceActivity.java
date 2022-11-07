@@ -43,11 +43,11 @@ public class TravelAssuranceActivity extends AppCompatActivity {
 
     protected void loadContentRecyclerView3() {
         List<MenuItemButton> buttons3 = new ArrayList<>();
-        buttons3.add(new MenuItemButton("Central de atendimento", R.drawable.ic_hands_heart, null
+        buttons3.add(new MenuItemButton("Central de atendimento", R.drawable.ic_call, null
                 , "Para dúvidas e transações", R.drawable.ic_down));
-        buttons3.add(new MenuItemButton("SAC", R.drawable.ic_hands_heart, null,
+        buttons3.add(new MenuItemButton("SAC", R.drawable.ic_telephone,  null,
                 "Sugestões, reclamações e elogios", R.drawable.ic_down));
-        buttons3.add(new MenuItemButton("Ouvidoria", R.drawable.ic_hands_heart, null,
+        buttons3.add(new MenuItemButton("Ouvidoria", R.drawable.ic_voice, null,
                 "Cheque reclamações feitas no SAC", R.drawable.ic_down));
 
         recyclerView3.setAdapter(new MenuItemAdapter(buttons3));
@@ -55,7 +55,7 @@ public class TravelAssuranceActivity extends AppCompatActivity {
 
     private void loadContentRecyclerView2() {
         List<MenuItemButton> buttons2 = new ArrayList<>();
-        buttons2.add(new MenuItemButton("Dúvidas frequentesl", R.drawable.ic_hands_heart, null
+        buttons2.add(new MenuItemButton("Dúvidas frequentesl", R.drawable.ic_question_with_circle, null
                 , "Tire suas dúvidas", null));
 
         recyclerView2.setAdapter(new MenuItemAdapter(buttons2));
