@@ -40,21 +40,24 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.MenuIt
     }
 
     class MenuItemButtonViewHolder extends RecyclerView.ViewHolder{
-        private final ImageView icon;
+        private final ImageView leftIcon;
         private final TextView title;
         private final TextView description;
+        private final ImageView rightIcon;
 
         public MenuItemButtonViewHolder(@NonNull View itemView) {
             super(itemView);
-            icon = itemView.findViewById(R.id.menu_item_icon);
+            leftIcon = itemView.findViewById(R.id.left_icon);
             title = itemView.findViewById(R.id.menu_item_title);
             description = itemView.findViewById(R.id.menu_item_description);
+            rightIcon = itemView.findViewById(R.id.right_icon);
         }
 
         public void bind(MenuItemButton menuItemButton){
-            Integer iconResource = menuItemButton.getIconResource();
+            Integer leftIcon = menuItemButton.getIconResource();
             String titleText = menuItemButton.getText();
             String descriptionText = menuItemButton.getDescription();
+            Integer rightIcon = menuItemButton.getRightIcon();
 
             if (titleText != null){
                 this.title.setText(titleText);
@@ -68,10 +71,16 @@ public class MenuItemAdapter extends RecyclerView.Adapter<MenuItemAdapter.MenuIt
                 this.description.setVisibility(View.GONE);
             }
 
-            if (iconResource != null){
-                this.icon.setImageResource(iconResource);
+            if (leftIcon != null){
+                this.leftIcon.setImageResource(leftIcon);
             }else{
-                this.icon.setVisibility(View.GONE);
+                this.leftIcon.setVisibility(View.GONE);
+            }
+
+            if (rightIcon != null){
+                this.rightIcon.setImageResource(rightIcon);
+            }else{
+                this.rightIcon.setVisibility(View.GONE);
             }
 
             this.itemView.setOnClickListener(menuItemButton.getOnClickListener());

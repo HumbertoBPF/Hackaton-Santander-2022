@@ -38,10 +38,11 @@ public class HealthAssuranceActivity extends AppCompatActivity {
         buttons.add(new MenuItemButton("Conheça nossos planos", R.drawable.ic_check, view -> {
             Intent intent = new Intent(HealthAssuranceActivity.this, HealthAssurancePlanActivity.class);
             startActivity(intent);
-        }, null));
+        }, null, R.drawable.ic_arrow_right));
         buttons.add(new MenuItemButton("Redes credenciadas", R.drawable.ic_check, view -> {
-
-        }, null));
+            Intent intent = new Intent(HealthAssuranceActivity.this, TravelAssuranceActivity.class);
+            startActivity(intent);
+        }, null, R.drawable.ic_arrow_right));
 
         menuRecyclerView.setAdapter(new MenuItemAdapter(buttons));
     }

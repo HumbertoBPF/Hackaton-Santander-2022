@@ -41,14 +41,14 @@ public class HealthSectionActivity extends AppCompatActivity {
                 Intent intent = new Intent(HealthSectionActivity.this, HealthAssuranceActivity.class);
                 startActivity(intent);
             }
-        }, null));
+        }, null, R.drawable.ic_arrow_right));
         buttons.add(new MenuItemButton("Seguro viagem", null, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HealthSectionActivity.this, TravelAssuranceActivity.class);
                 startActivity(intent);
             }
-        }, null));
+        }, null, R.drawable.ic_arrow_right));
 
         menuRecyclerView.setAdapter(new MenuItemAdapter(buttons));
     }

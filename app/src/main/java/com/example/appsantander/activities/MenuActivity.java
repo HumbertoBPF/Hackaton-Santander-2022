@@ -1,12 +1,11 @@
 package com.example.appsantander.activities;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 
 import com.example.appsantander.R;
 import com.example.appsantander.adapters.MenuItemAdapter;
@@ -35,15 +34,14 @@ public class MenuActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         List<MenuItemButton> buttons = new ArrayList<>();
-        buttons.add(new MenuItemButton("OpenFinance", null, null, "Mais autonomia e as melhores ofertas"));
-        buttons.add(new MenuItemButton("Pix", R.drawable.ic_pix, null, "Pague, transfira e receba"));
-        buttons.add(new MenuItemButton("Saúde", R.drawable.ic_hand_health, new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, HealthSectionActivity.class);
-                startActivity(intent);
-            }
-        }, null));
+        buttons.add(new MenuItemButton("OpenFinance", null, null,
+                "Mais autonomia e as melhores ofertas", R.drawable.ic_arrow_right));
+        buttons.add(new MenuItemButton("Pix", R.drawable.ic_pix, null,
+                "Pague, transfira e receba", R.drawable.ic_arrow_right));
+        buttons.add(new MenuItemButton("Saúde", R.drawable.ic_hand_health, view -> {
+            Intent intent = new Intent(MenuActivity.this, HealthSectionActivity.class);
+            startActivity(intent);
+        }, null, R.drawable.ic_arrow_right));
 
         menuRecyclerView.setAdapter(new MenuItemAdapter(buttons));
     }
