@@ -13,6 +13,26 @@
         android:theme="@style/Theme.AppSantander"
         tools:targetApi="31">
         <activity
+            android:name=".activities.AssuranceConfirmationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HealthAssurancePlanActivity" />
+        </activity>
+        <activity
+            android:name=".activities.HealthAssurancePlanActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.HealthAssuranceActivity" />
+        </activity>
+        <activity
             android:name=".activities.TravelAssuranceActivity"
             android:exported="false">
             <meta-data

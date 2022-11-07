@@ -17,4 +17,31 @@
     <string name="banking_credentials_text">Ag 1234, Cc 01234567-8</string>
     <string name="greeting_text">Olá, Humberto</string>
     <string name="username">Humberto</string>
+    <string-array name="complete_plan_description">
+        <item>Cobertura nacional</item>
+        <item>Emergência 24h</item>
+        <item>Reembolso de até R$ 500</item>
+        <item>Acomodação hospitalar individual</item>
+        <item>Coleta domiciliar</item>
+        <item>Terapias complementares</item>
+        <item>Telemedicina</item>
+        <item>Descontos em farmácia</item>
+    </string-array>
+    <string-array name="intermediate_plan_description">
+        <item>Cobertura nacional</item>
+        <item>Emergência 24h</item>
+        <item>Reembolso de até R$ 250</item>
+        <item>Acomodação hospitalar coletiva</item>
+        <item>Coleta domiciliar</item>
+        <item>Telemedicina</item>
+        <item>Descontos em farmácia</item>
+    </string-array>
+    <string-array name="basic_plan_description">
+        <item>Cobertura nacional</item>
+        <item>Emergência 24h</item>
+        <item>Reembolso de até R$ 95</item>
+        <item>Acomodação hospitalar coletiva</item>
+        <item>Telemedicina</item>
+        <item>Descontos em farmácia</item>
+    </string-array>
 </resources>

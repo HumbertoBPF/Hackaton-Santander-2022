@@ -1,6 +1,5 @@
 package com.example.appsantander.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,21 +7,22 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.appsantander.R;
-import com.example.appsantander.adapters.MenuItemAdapter;
-import com.example.appsantander.ui.MenuItemButton;
+import com.example.appsantander.adapters.HealthAssurancePlanAdapter;
+import com.example.appsantander.ui.HealthAssurancePlan;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class HealthAssuranceActivity extends AppCompatActivity {
+public class HealthAssurancePlanActivity extends AppCompatActivity {
 
     private RecyclerView menuRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_assurance);
+        setContentView(R.layout.activity_health_assurance_plan);
 
         menuRecyclerView = findViewById(R.id.menu_recycler_view);
 
@@ -34,15 +34,12 @@ public class HealthAssuranceActivity extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back);// set drawable icon
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        List<MenuItemButton> buttons = new ArrayList<>();
-        buttons.add(new MenuItemButton("Conheça nossos planos", R.drawable.ic_check, view -> {
-            Intent intent = new Intent(HealthAssuranceActivity.this, HealthAssurancePlanActivity.class);
-            startActivity(intent);
-        }, null));
-        buttons.add(new MenuItemButton("Redes credenciadas", R.drawable.ic_check, view -> {
+        List<HealthAssurancePlan> plans = new ArrayList<>();
 
-        }, null));
+        plans.add(new HealthAssurancePlan("Completo", Arrays.asList(getResources().getStringArray(R.array.complete_plan_description)), "R$ 682,00"));
+        plans.add(new HealthAssurancePlan("Intermediário", Arrays.asList(getResources().getStringArray(R.array.intermediate_plan_description)), "R$ 401,00"));
+        plans.add(new HealthAssurancePlan("Básico", Arrays.asList(getResources().getStringArray(R.array.basic_plan_description)), "R$ 226,00"));
 
-        menuRecyclerView.setAdapter(new MenuItemAdapter(buttons));
+        menuRecyclerView.setAdapter(new HealthAssurancePlanAdapter(HealthAssurancePlanActivity.this, plans));
     }
 }
