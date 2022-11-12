@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.appsantander.R;
 import com.example.appsantander.activities.AssuranceConfirmationActivity;
 import com.example.appsantander.ui.HealthAssurancePlan;
+import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
 
@@ -46,12 +47,14 @@ public class HealthAssurancePlanAdapter extends RecyclerView.Adapter<HealthAssur
         private final TextView title;
         private final TextView description;
         private final TextView price;
+        private final MaterialCardView chooseButton;
 
         public HealthAssurancePlanViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title_text_view);
             description = itemView.findViewById(R.id.description_text_view);
             price = itemView.findViewById(R.id.price_text_view);
+            chooseButton = itemView.findViewById(R.id.choose_button);
         }
 
         public void bind(HealthAssurancePlan plan){
@@ -65,7 +68,7 @@ public class HealthAssurancePlanAdapter extends RecyclerView.Adapter<HealthAssur
             description.setText(descriptionItems);
             price.setText(plan.getPrice());
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            chooseButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, AssuranceConfirmationActivity.class);
